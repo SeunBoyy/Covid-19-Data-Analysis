@@ -18,7 +18,8 @@ warnings.filterwarnings ('ignore')
 #check for null values, and if the data contains any, remove them.
 #additionally, inspect for duplicate values and remove them if present.
 
-#load the dataset and print the top 5 rows
+
+ #load the dataset and print the top 5 rows
 import pandas as pd
 ​
 data = pd.read_csv(r"C:\Users\user\Documents\DATA ANALYTICS\COVID DATA -SEUN.csv")
@@ -30,9 +31,10 @@ States Affected	No. of Cases (Lab Confirmed)	No. of Cases (on admission)	No. Dis
 3	Kaduna	11,603	4	11,510	89
 4	Oyo	10,334	2	10,130	202
 
-#about the dataset
-​
-data.info()
+
+
+#About the dataset
+​data.info()
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 37 entries, 0 to 36
 Data columns (total 5 columns):
@@ -64,9 +66,7 @@ sns.heatmap(data.corr(),annot=True,cmap='winter_r',fmt='.2f',linewidths=1)
 plt.title('correlation map')
 plt.show()
 
-![correlatin map](Analysis Correlation map.png)
 
-![Analysis Correlation map](https://github.com/SeunBoyy/Covid-19-Data-Analysis-using-Python/assets/137322058/4e88ed3f-533a-481c-9a6f-288c8f1e73e9)
 
 
 #data cleaning process
@@ -88,11 +88,13 @@ percentage_missing_values=(total_missing_values/total_shells)*100
 print(f'the dataset contains {percentage_missing_values} of values')
 the dataset contains 0.0 of values
 
+
 #checking the duplicate values in the dataset
 duplicate=data.duplicated().sum()
 print(f'there is {duplicate} values in the dataset')
 ​
 there is 0 values in the dataset
+
 
 # Check column names and data types
 print(data.dtypes) 
@@ -112,3 +114,8 @@ plt.xticks(rotation=90)
 plt.ylabel('count of values')
 plt.show()
 ```
+
+![correlatin map](Analysis Correlation map.png)
+![Analysis Correlation map](https://github.com/SeunBoyy/Covid-19-Data-Analysis-using-Python/assets/137322058/92ea13b7-a34a-4596-8c09-40b303879804)
+
+
