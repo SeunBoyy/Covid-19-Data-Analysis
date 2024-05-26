@@ -64,6 +64,11 @@ sns.heatmap(data.corr(),annot=True,cmap='winter_r',fmt='.2f',linewidths=1)
 plt.title('correlation map')
 plt.show()
 
+![correlatin map](Analysis Correlation map.png)
+
+![Analysis Correlation map](https://github.com/SeunBoyy/Covid-19-Data-Analysis-using-Python/assets/137322058/4e88ed3f-533a-481c-9a6f-288c8f1e73e9)
+
+
 #data cleaning process
 #checking the null values in the datasets
 data.isna().sum()/len(data)*100
